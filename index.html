@@ -4,30 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akash Kumar Singh | Product Solution Engineer</title>
-    <!-- Fonts and Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="custom-cursor"></div>
-    <div class="bg-decoration">
-        <div class="shape circle"></div>
-        <div class="shape triangle"></div>
-        <div class="shape square"></div>
+
+    <!-- Enhanced Background Effects -->
+    <div class="bg-gradient"></div>
+    <div class="bg-mesh">
+        <div class="mesh-blob blob-1"></div>
+        <div class="mesh-blob blob-2"></div>
+        <div class="mesh-blob blob-3"></div>
+        <div class="mesh-blob blob-4"></div>
     </div>
+    <canvas id="particle-canvas"></canvas>
 
     <nav class="top-nav">
         <div class="logo mono">AKASH_K_SINGH</div>
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
-            <a href="#projects">Work</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
             <a href="#resume">Resume</a>
         </div>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
     <main>
+        <!-- Hero Section -->
         <section id="hero" class="full-section reveal">
             <div class="hero-inner">
                 <div class="title-mask">
@@ -35,75 +47,378 @@
                         Hello.<br>I Build <span class="accent">Fintech.</span>
                     </h1>
                 </div>
-                <p class="hero-bio stagger-item">Product Solution Engineer @ <strong>Juspay</strong>. Turning complex payment flows into seamless experiences.</p>
+                <p class="hero-bio stagger-item">Product Solution Engineer @ <strong>Juspay</strong>. Turning complex payment flows into seamless experiences. Managing 500cr+ GMV across top-tier merchants.</p>
+                <div class="hero-stats stagger-item">
+                    <div class="hero-stat">
+                        <span class="stat-num">500cr+</span>
+                        <span class="stat-label">GMV Managed</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-num">4+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-num">15+</span>
+                        <span class="stat-label">Enterprise Clients</span>
+                    </div>
+                </div>
                 <div class="hero-socials stagger-item">
-                    <a href="https://github.com/akashrajput25" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/akashkumarsingh001" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/akashrajput25" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/akashkumarsingh001" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:akashkumarsingh001@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </section>
 
+        <!-- About Section -->
         <section id="about" class="full-section reveal">
             <div class="container">
-                <h2 class="section-heading">01. The Gist</h2>
+                <h2 class="section-heading">01. About Me</h2>
                 <div class="about-grid">
                     <div class="text-block stagger-item">
-                        <p>I thrive at the intersection of technical architecture and client solutioning. From bridging ERP data gaps at <strong>HighRadius</strong> to orchestrating massive GMV flows at <strong>Juspay</strong>, I build tools that actually move the needle.</p>
+                        <p>I thrive at the intersection of <strong>technical architecture</strong> and <strong>client solutioning</strong>. From bridging ERP data gaps at <strong>HighRadius</strong> to orchestrating massive GMV flows at <strong>Juspay</strong>, I build tools that actually move the needle.</p>
+                        <p class="mt-2">Currently leading merchant integrations and developing AI-powered tools to streamline payment solutions for enterprise clients across India.</p>
                     </div>
                     <div class="stats-block">
-                        <div class="stat-card stagger-item"><h3>500cr+</h3><p>GMV Managed</p></div>
-                        <div class="stat-card stagger-item"><h3>90%</h3><p>Data Precision</p></div>
+                        <div class="stat-card stagger-item">
+                            <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
+                            <h3>500cr+</h3>
+                            <p>GMV Managed</p>
+                        </div>
+                        <div class="stat-card stagger-item">
+                            <div class="stat-icon"><i class="fas fa-bullseye"></i></div>
+                            <h3>90%</h3>
+                            <p>Data Precision Improvement</p>
+                        </div>
+                        <div class="stat-card stagger-item">
+                            <div class="stat-icon"><i class="fas fa-users"></i></div>
+                            <h3>50%</h3>
+                            <p>Cost Reduction (Workato)</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Experience Section -->
         <section id="experience" class="full-section reveal">
             <div class="container">
-                <h2 class="section-heading">02. The Journey</h2>
-                <div class="exp-blocks">
+                <h2 class="section-heading">02. Professional Experience</h2>
+                <div class="timeline">
+                    <!-- Juspay -->
                     <div class="exp-item stagger-item">
-                        <span class="mono">2024 - NOW</span>
-                        <h3>Product Solution Engineer · Juspay</h3>
-                        <p>Scaling SDK integrations and building AI-driven research tools.</p>
+                        <div class="exp-header">
+                            <div class="exp-title-group">
+                                <h3>Product Solution Engineer</h3>
+                                <span class="company">Juspay Technologies Pvt Ltd, Bangalore</span>
+                            </div>
+                            <span class="duration mono">04/2024 – Present</span>
+                        </div>
+                        <ul class="exp-details">
+                            <li>Handling top tier merchants like <strong>Apollo, Ring, Kissht, Acko, Airtel, HPCL</strong> as part of Program merchants and integrated merchants with High GMV like <strong>Giva, Paypoint, Auragold</strong> along with multiple small merchants contributing more than <strong>500cr GMV</strong>.</li>
+                            <li>Helping merchants integrate <strong>Payment Page and SDKs</strong> for faster pay-in, settlement, payouts along with pitching multiple features like <strong>DOTP, CVVless, surcharge, Routing Logic</strong>.</li>
+                            <li><strong>Cross-Functional Leadership:</strong> Partnering with external Payment Gateways and internal engineering teams to resolve priority bugs and validate payment flows prior to production release.</li>
+                            <li><strong>Juspay Playground:</strong> Added new product idea – A web-based platform to reduce repeated dependency for app integration and Product solutioning, built on <strong>Kimi AI research agent and TypeScript</strong>.</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span class="tag">Program POC</span>
+                            <span class="tag">Merchant Integration</span>
+                            <span class="tag">SDK Implementation</span>
+                            <span class="tag">AI Tools</span>
+                        </div>
                     </div>
+
+                    <!-- HighRadius - Associate Software Engineer -->
                     <div class="exp-item stagger-item">
-                        <span class="mono">2021 - 2024</span>
-                        <h3>Associate Software Engineer · HighRadius</h3>
-                        <p>Architecture lead for balance ingestion and Workato flow precision.</p>
+                        <div class="exp-header">
+                            <div class="exp-title-group">
+                                <h3>Associate Software Engineer</h3>
+                                <span class="company">Highradius Corporation, Hyderabad</span>
+                            </div>
+                            <span class="duration mono">07/2021 – 04/2024</span>
+                        </div>
+                        <ul class="exp-details">
+                            <li>Engineered the <strong>Plaid Connector with Workato</strong> in the G4 platform in a team of 6 members using <strong>JavaScript and Ruby</strong> to ingest and filter Balances and Transactions data, enhancing data precision and efficiency by <strong>90%</strong>.</li>
+                            <li>Developed <strong>Spring Boot APIs</strong> for data ingestion, created Workato flows for data job ingestion, configured connectors for REST services and led various integration POCs.</li>
+                            <li>Designed system architecture for various ERPs/flows and solved bugs for hassle-free data ingestion.</li>
+                            <li>Added <strong>JUnit test cases</strong> for Maven projects and increased coverage to <strong>90%</strong> using Mockito.</li>
+                            <li>Configured standard Objects using <strong>Snowflake and MySQL</strong> for Account Payables and Autonomous Accounting product, worked on NetSuite column definition and data ingestion.</li>
+                            <li>Prepared interface-specific design documents, Technical Design Docs, owned integration testing for change requests and followed Agile practices.</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Workato</span>
+                            <span class="tag">Plaid</span>
+                            <span class="tag">NetSuite</span>
+                            <span class="tag">Snowflake</span>
+                        </div>
+                    </div>
+
+                    <!-- HighRadius - Analytics Intern -->
+                    <div class="exp-item stagger-item">
+                        <div class="exp-header">
+                            <div class="exp-title-group">
+                                <h3>Analytics Intern</h3>
+                                <span class="company">Highradius Corporation, Bhubaneswar</span>
+                            </div>
+                            <span class="duration mono">07/2021 – 06/2022</span>
+                        </div>
+                        <ul class="exp-details">
+                            <li>Worked in Analytics team, designed <strong>Database/Snowflake Queries</strong>, tested them for final deployment into server.</li>
+                            <li>Understood the company's code of conduct and security threats at work during virtual sessions.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Highway to Highradius -->
+                    <div class="exp-item stagger-item">
+                        <div class="exp-header">
+                            <div class="exp-title-group">
+                                <h3>Tech Track Intern</h3>
+                                <span class="company">Highway to Highradius, Remote</span>
+                            </div>
+                            <span class="duration mono">05/2021 – 06/2021</span>
+                        </div>
+                        <ul class="exp-details">
+                            <li>Built an <strong>AI-Enabled Fintech B2B Invoice Management Application</strong> for predicting the invoice clearing date.</li>
+                            <li>Developed Application UI using <strong>React JS, CSS, and Material UI</strong> and designed backend REST API services using <strong>JDBC, Java Servlets with MySQL</strong> database.</li>
+                            <li>Developed ML program to predict invoice clearing date using <strong>XGBoost Model and Flask API</strong>.</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">XGBoost</span>
+                        </div>
+                    </div>
+
+                    <!-- Sparks Foundation -->
+                    <div class="exp-item stagger-item">
+                        <div class="exp-header">
+                            <div class="exp-title-group">
+                                <h3>Web Development Intern</h3>
+                                <span class="company">The Sparks Foundation, Singapore</span>
+                            </div>
+                            <span class="duration mono">06/2020 – 12/2020</span>
+                        </div>
+                        <ul class="exp-details">
+                            <li>Built a <strong>Credit Management Web Application</strong> using <strong>PHP and MySQL</strong> for transfer of credits between different users.</li>
+                            <li>Understood marketplace, competition, and industry to ensure optimal design.</li>
+                            <li><strong>Mentor:</strong> Guided internship students on their tasks during the development phase (08/2020 – 03/2021).</li>
+                        </ul>
+                        <div class="exp-tags">
+                            <span class="tag">PHP</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Mentorship</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Skills Section -->
+        <section id="skills" class="full-section reveal">
+            <div class="container">
+                <h2 class="section-heading">03. Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category stagger-item">
+                        <div class="skill-header">
+                            <i class="fas fa-code"></i>
+                            <h3>Technologies</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">Spring Boot</span>
+                            <span class="skill-tag">Microservices</span>
+                            <span class="skill-tag">SOAP/RESTful APIs</span>
+                            <span class="skill-tag">ERP Automation</span>
+                            <span class="skill-tag">JUnit</span>
+                            <span class="skill-tag">Mockito</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Ruby</span>
+                            <span class="skill-tag">TypeScript</span>
+                            <span class="skill-tag">React JS</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category stagger-item">
+                        <div class="skill-header">
+                            <i class="fas fa-tools"></i>
+                            <h3>Tools & Platforms</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag highlight">Claude</span>
+                            <span class="skill-tag highlight">Gemini</span>
+                            <span class="skill-tag highlight">Cline</span>
+                            <span class="skill-tag highlight">Copilot</span>
+                            <span class="skill-tag">Workato</span>
+                            <span class="skill-tag">Plaid</span>
+                            <span class="skill-tag">Putty</span>
+                            <span class="skill-tag">Jira</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Jenkins</span>
+                            <span class="skill-tag">Postman</span>
+                            <span class="skill-tag">SOAPUI</span>
+                            <span class="skill-tag">Tomcat</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category stagger-item">
+                        <div class="skill-header">
+                            <i class="fas fa-database"></i>
+                            <h3>Databases</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">MySQL 5.0/8.0</span>
+                            <span class="skill-tag">Snowflake</span>
+                            <span class="skill-tag">NetSuite</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category stagger-item">
+                        <div class="skill-header">
+                            <i class="fas fa-users-cog"></i>
+                            <h3>Leadership & Soft Skills</h3>
+                        </div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Team Leadership</span>
+                            <span class="skill-tag">Cross-functional Collaboration</span>
+                            <span class="skill-tag">Client Relationship Management</span>
+                            <span class="skill-tag">Agile Methodology</span>
+                            <span class="skill-tag">Technical Documentation</span>
+                            <span class="skill-tag">Mentorship</span>
+                            <span class="skill-tag">Time Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
         <section id="projects" class="full-section reveal">
             <div class="container">
-                <h2 class="section-heading">03. The Work</h2>
+                <h2 class="section-heading">04. Featured Projects</h2>
                 <div class="work-grid">
                     <div class="work-item stagger-item">
                         <div class="work-content">
-                            <span class="mono">Case Study</span>
+                            <span class="mono">AI Product</span>
                             <h3>Juspay Playground</h3>
-                            <p>An AI-based research agent simplifying complex SDK integrations.</p>
+                            <p>A web-based AI research platform built on Kimi AI agent and TypeScript to reduce dependency for app integration and product solutioning. Enables merchants to self-serve SDK integrations.</p>
+                            <div class="work-tech">
+                                <span>TypeScript</span>
+                                <span>Kimi AI</span>
+                                <span>SDK Integration</span>
+                            </div>
                         </div>
                     </div>
                     <div class="work-item stagger-item">
                         <div class="work-content">
-                            <span class="mono">ML App</span>
+                            <span class="mono">ML Application</span>
                             <h3>B2B Invoice Predictor</h3>
-                            <p>Predicting clearing dates using XGBoost and high-precision modeling.</p>
+                            <p>AI-enabled Fintech application for predicting invoice clearing dates using XGBoost model. Built with React frontend, Java Servlets backend, and Flask API for ML predictions.</p>
+                            <div class="work-tech">
+                                <span>React</span>
+                                <span>XGBoost</span>
+                                <span>Flask</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-item stagger-item">
+                        <div class="work-content">
+                            <span class="mono">Integration</span>
+                            <h3>Plaid Connector</h3>
+                            <p>Engineered Workato connector for G4 platform using JavaScript and Ruby to ingest Balances and Transactions data, achieving 90% improvement in data precision and efficiency.</p>
+                            <div class="work-tech">
+                                <span>Workato</span>
+                                <span>Plaid</span>
+                                <span>JavaScript</span>
+                                <span>Ruby</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-item stagger-item">
+                        <div class="work-content">
+                            <span class="mono">Web App</span>
+                            <h3>Credit Management System</h3>
+                            <p>Full-stack credit management application for transferring credits between users. Built with PHP and MySQL with secure transaction handling and user management.</p>
+                            <div class="work-tech">
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>Bootstrap</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Education Section -->
+        <section id="education" class="full-section reveal">
+            <div class="container">
+                <h2 class="section-heading">05. Education</h2>
+                <div class="education-grid">
+                    <div class="edu-card stagger-item">
+                        <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="edu-content">
+                            <h3>Bachelor of Technology (CSIT)</h3>
+                            <span class="institution">ITER, SOA University</span>
+                            <span class="duration mono">2018 – 2022</span>
+                        </div>
+                    </div>
+                    <div class="edu-card stagger-item">
+                        <div class="edu-icon"><i class="fas fa-school"></i></div>
+                        <div class="edu-content">
+                            <h3>12th HSE Science (PCM+Phe)</h3>
+                            <span class="institution">Oxford Public School, Ranchi</span>
+                            <span class="duration mono">2018</span>
+                        </div>
+                    </div>
+                    <div class="edu-card stagger-item">
+                        <div class="edu-icon"><i class="fas fa-book"></i></div>
+                        <div class="edu-content">
+                            <h3>10th CBSE</h3>
+                            <span class="institution">DAV Nandraj Public School, Ranchi</span>
+                            <span class="duration mono">2016</span>
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="section-heading mt-5">Achievements</h2>
+                <div class="achievements-list">
+                    <div class="achievement-item stagger-item">
+                        <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                        <div class="achievement-content">
+                            <h4>Workato Team Lead</h4>
+                            <p>Led Workato team of 3 members at HighRadius, collaborating to maintain flow structure, develop connectors, and reduce Workato task usage and costing by <strong>50%</strong> using efficient flow logic for 15 clients.</p>
+                            <span class="duration mono">10/2022 – 03/2024</span>
+                        </div>
+                    </div>
+                    <div class="achievement-item stagger-item">
+                        <div class="achievement-icon"><i class="fas fa-award"></i></div>
+                        <div class="achievement-content">
+                            <h4>TCS National Qualifier Test</h4>
+                            <p>Scored <strong>1394 out of 1800</strong> in the TCS National Qualifier Test</p>
+                            <span class="duration mono">08/2020</span>
+                        </div>
+                    </div>
+                    <div class="achievement-item stagger-item">
+                        <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
+                        <div class="achievement-content">
+                            <h4>Letter of Recommendation</h4>
+                            <p>Acknowledged with LOR from The Sparks Foundation, Singapore for exceptional internship performance</p>
+                            <span class="duration mono">09/2020</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
         <section id="resume" class="full-section reveal">
             <div class="container">
-                <h2 class="section-heading">04. Resume</h2>
+                <h2 class="section-heading">06. Resume</h2>
                 <div class="resume-content">
-                    <p class="hero-bio stagger-item">Interested in my professional background? Download my latest resume to see a detailed overview of my skills and experience.</p>
-                    <a href="assets/resume.pdf" class="resume-button stagger-item" download>
+                    <p class="hero-bio stagger-item">Interested in my complete professional background? Download my latest resume for a detailed overview of my experience, skills, and achievements.</p>
+                    <a href="Akash%20Kumar%20Singh%20Resume%202026.pdf" class="resume-button stagger-item" download>
                         Download Resume
                         <span class="btn-icon"><i class="fas fa-download"></i></span>
                     </a>
@@ -113,7 +428,14 @@
     </main>
 
     <footer class="footer-simple">
-        <p class="mono">Built by Akash</p>
+        <div class="footer-content">
+            <p class="mono">Built with <i class="fas fa-heart"></i> by Akash Kumar Singh</p>
+            <div class="footer-links">
+                <a href="https://github.com/akashrajput25" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/akashkumarsingh001" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:akashkumarsingh001@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
     </footer>
     <script src="script.js"></script>
 </body>
